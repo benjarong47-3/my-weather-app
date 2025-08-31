@@ -488,3 +488,116 @@ body {
         font-size: 11px;
     }
 }
+
+/* ===== Favorites block (glass pastel) ===== */
+.favorites-wrap {
+    margin-top: 16px;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, .32);
+}
+
+.header-bar h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #132423;
+}
+
+#refresh-btn {
+    background: transparent;
+    border: 1px solid #A0D8EF;
+    color: #0f1c1a;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .18s ease, transform .12s ease;
+}
+
+#refresh-btn:hover {
+    background: #A0D8EF;
+    transform: translateY(-1px);
+}
+
+.favorites-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.fav-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .22);
+    border: 1px solid rgba(255, 255, 255, .36);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+}
+
+.fav-city {
+    margin: 0;
+    font-weight: 800;
+    color: #132423;
+}
+
+.fav-temp {
+    margin-left: auto;
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f1c1a;
+}
+
+.fav-desc {
+    font-size: 12px;
+    color: #28504b;
+}
+
+.fav-remove {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 0;
+    background: #ff4d4d;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.fav-remove:hover {
+    filter: brightness(1.08);
+}
+
+/* ซ่อนทั้งบล็อกจนกว่าจะมีรายการ/การค้นหา */
+.favorites-wrap.hidden {
+    display: none !important;
+}
+
+/* ปรับพื้นหลังให้ขยับช้าลง (ลดเวียนหัว) */
+.pixel-bg .sky {
+    animation: move-sky 120s linear infinite;
+}
+
+.pixel-bg .stars {
+    animation: move-stars 240s linear infinite, twinkle 3s steps(2) infinite;
+}
+
+.pixel-bg .clouds-mid {
+    animation: move-mid 90s linear infinite;
+}
+
+.pixel-bg .clouds-front {
+    animation: move-front 60s linear infinite;
+}

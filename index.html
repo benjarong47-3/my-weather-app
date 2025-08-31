@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- Pixel Parallax Background (single scene) -->
+    <!-- Pixel Parallax Background -->
     <div class="pixel-bg" aria-hidden="true">
         <div class="layer sky"></div>
         <div class="layer stars"></div>
@@ -25,8 +25,8 @@
             <header class="app-header">
                 <div class="brand">
                     <div class="pixel-logo" aria-hidden="true">
+                        <!-- เมฆพิกเซล (SVG) -->
                         <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                            <!-- sun highlight/body -->
                             <rect x="2" y="2" width="1" height="1" fill="#FFE9A8" />
                             <rect x="3" y="2" width="1" height="1" fill="#FFE9A8" />
                             <rect x="4" y="2" width="1" height="1" fill="#FFD085" />
@@ -40,7 +40,6 @@
                             <rect x="5" y="4" width="1" height="1" fill="#FFD085" />
                             <rect x="3" y="5" width="1" height="1" fill="#FFD085" />
                             <rect x="4" y="5" width="1" height="1" fill="#FFD085" />
-                            <!-- cloud highlight/body -->
                             <rect x="6" y="6" width="1" height="1" fill="#F4FAFF" />
                             <rect x="7" y="6" width="1" height="1" fill="#F4FAFF" />
                             <rect x="8" y="6" width="1" height="1" fill="#F4FAFF" />
@@ -80,16 +79,16 @@
 
             <!-- Search -->
             <form id="search-form" class="search search--top">
-                <input id="city-input" type="text" placeholder="ค้นหาชื่อเมือง..." required />
-                <button type="submit">ค้นหา</button>
+                <input id="city-input" type="text" placeholder="ค้นหาหรือเพิ่มเมืองโปรด..." required />
+                <button type="submit">เพิ่ม</button>
             </form>
 
-            <!-- Weather card (glass) : hidden until search -->
+            <!-- การ์ดผลลัพธ์ปัจจุบัน -->
             <section class="card main-card weather-card hidden" id="weather-card">
                 <div class="main-top">
                     <div class="when" id="when-text">—</div>
                     <div class="hero">
-                        <img id="cur-icon" alt="" />
+                        <img id="cur-icon" alt="">
                         <div class="hero-text">
                             <div class="cond" id="cur-desc">—</div>
                             <div class="temp" id="cur-temp">—</div>
@@ -99,23 +98,9 @@
                 </div>
 
                 <div class="slab">
-                    <div class="slab-item">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M3 18h18M6 14l2 2m8-2l-2 2M12 8v8" stroke="currentColor" stroke-width="1.6"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span id="sunrise">—</span>
-                    </div>
-                    <div class="slab-item center">
-                        <span id="day-length">—</span>
-                    </div>
-                    <div class="slab-item">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M3 18h18M6 14l2 2m8-2l-2 2M12 16V8" stroke="currentColor" stroke-width="1.6"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span id="sunset">—</span>
-                    </div>
+                    <div class="slab-item"><span id="sunrise">—</span></div>
+                    <div class="slab-item center"><span id="day-length">—</span></div>
+                    <div class="slab-item"><span id="sunset">—</span></div>
                 </div>
 
                 <div class="metrics">
@@ -125,6 +110,15 @@
                 </div>
 
                 <div class="week" id="week-grid"></div>
+            </section>
+
+            <!-- รายการเมืองโปรด (ซ่อนก่อน) -->
+            <section class="card favorites-wrap hidden" id="favorites-wrap">
+                <div class="header-bar">
+                    <h2>เมืองโปรด</h2>
+                    <button id="refresh-btn" type="button">Refresh</button>
+                </div>
+                <div id="favorites-container" class="favorites-grid"></div>
             </section>
 
             <div id="status" class="status"></div>
