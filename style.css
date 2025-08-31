@@ -1,14 +1,9 @@
 :root {
-    /* theme */
     --bg: #b8c5b9;
     --muted: #aab1a9;
     --text: #e7ede6;
-
-    /* layout */
     --content-width: 860px;
     --input-h: 46px;
-
-    /* card */
     --radius: 26px;
 }
 
@@ -34,24 +29,24 @@ body {
 
 .stage {
     width: 100%;
-    max-width: 900px;
+    max-width: 900px
 }
 
 .board {
     background: transparent;
     padding: 0 20px 28px;
-    display: block;
+    display: block
 }
 
 .hidden {
-    display: none !important;
+    display: none !important
 }
 
 /* Header */
 .app-header {
     display: flex;
     justify-content: center;
-    margin: 14px 0 12px;
+    margin: 14px 0 12px
 }
 
 .brand {
@@ -62,20 +57,20 @@ body {
     border-radius: 18px;
     padding: 10px 16px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px)
 }
 
 .pixel-logo {
     width: 80px;
     height: 60px;
     animation: bob 3.2s ease-in-out infinite;
-    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .35));
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .35))
 }
 
 .pixel-logo svg {
     width: 100%;
     height: 100%;
-    image-rendering: pixelated;
+    image-rendering: pixelated
 }
 
 @keyframes bob {
@@ -99,18 +94,14 @@ body {
     font-size: 22px;
     letter-spacing: .5px;
     color: #fff;
-    text-shadow:
-        0 0 6px rgba(255, 255, 255, .35),
-        0 2px 10px rgba(0, 0, 0, .25),
-        1px 1px rgba(160, 216, 239, .18),
-        -1px 1px rgba(245, 169, 184, .12);
+    text-shadow: 0 0 6px rgba(255, 255, 255, .35), 0 2px 10px rgba(0, 0, 0, .25), 1px 1px rgba(160, 216, 239, .18), -1px 1px rgba(245, 169, 184, .12)
 }
 
 .brand-tag {
     margin: 0;
     color: #dfe8e0;
     opacity: .9;
-    font-size: 13px;
+    font-size: 13px
 }
 
 /* Search */
@@ -122,7 +113,7 @@ body {
     margin: 0 auto 14px;
     position: sticky;
     top: 12px;
-    z-index: 20;
+    z-index: 20
 }
 
 .search::before {
@@ -132,7 +123,7 @@ body {
     border-radius: 16px;
     background: rgba(248, 250, 252, .38);
     filter: blur(8px);
-    z-index: -1;
+    z-index: -1
 }
 
 .search input {
@@ -144,11 +135,11 @@ body {
     background: rgba(215, 225, 216, .85);
     color: #051923;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 20px
 }
 
 .search input::placeholder {
-    color: rgba(20, 35, 32, .55);
+    color: rgba(20, 35, 32, .55)
 }
 
 .search button {
@@ -160,14 +151,14 @@ body {
     color: #051923;
     font-weight: 700;
     box-shadow: 0 8px 18px rgba(160, 216, 239, .12);
-    transition: background .18s ease, transform .12s ease;
+    transition: background .18s ease, transform .12s ease
 }
 
 .search button:hover,
 .search button:focus {
     background: #F5A9B8;
     color: #08141a;
-    transform: translateY(-1px);
+    transform: translateY(-1px)
 }
 
 /* Card (glass) */
@@ -182,34 +173,34 @@ body {
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 18px;
-    color: #152524;
+    color: #152524
 }
 
 .main-top {
     background: rgba(255, 255, 255, .08);
     border: 1px solid rgba(255, 255, 255, .16);
     border-radius: 14px;
-    padding: 10px 12px 6px;
+    padding: 10px 12px 6px
 }
 
 .when {
     color: #132423;
     font-size: 13px;
     margin-bottom: 8px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .55);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .55)
 }
 
 .hero {
     display: flex;
     gap: 12px;
-    align-items: center;
+    align-items: center
 }
 
 .hero img {
     width: 58px;
     height: 58px;
     background: #111;
-    border-radius: 8px;
+    border-radius: 8px
 }
 
 .cond {
@@ -217,19 +208,19 @@ body {
     font-weight: 800;
     line-height: 1.2;
     color: #132423;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .55);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .55)
 }
 
 .temp {
     font-size: 18px;
     font-weight: 700;
-    color: #0f1c1a;
+    color: #0f1c1a
 }
 
 .place {
     font-size: 14px;
     color: #28504b;
-    opacity: .85;
+    opacity: .85
 }
 
 /* Slab / Metrics */
@@ -241,31 +232,25 @@ body {
     border: 1px solid rgba(255, 255, 255, .12);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 10px
 }
 
 .slab-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: rgba(20, 35, 32, .85);
+    color: rgba(20, 35, 32, .85)
 }
 
 .slab-item.center {
-    justify-content: center;
-}
-
-.slab-item svg {
-    width: 18px;
-    height: 18px;
-    opacity: .8;
+    justify-content: center
 }
 
 .metrics {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: 10px 0 6px;
+    margin: 10px 0 6px
 }
 
 .metric {
@@ -276,20 +261,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #0f1c1a;
+    color: #0f1c1a
 }
 
 .metric .label {
-    color: #28504b;
+    color: #28504b
 }
 
-/* Week forecast: desktop (auto-fit) */
+/* Week */
 .week {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
     overflow: visible;
-    padding: 8px 6px 0;
+    padding: 8px 6px 0
 }
 
 .day {
@@ -305,7 +290,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: center;
+    text-align: center
 }
 
 .day .name {
@@ -313,7 +298,7 @@ body {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: .2px;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, .55);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, .55)
 }
 
 .day img {
@@ -321,28 +306,28 @@ body {
     height: 28px;
     margin: 0 auto 6px;
     display: block;
-    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, .65)) drop-shadow(0 2px 6px rgba(0, 0, 0, .25)) brightness(1.05);
+    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, .65)) drop-shadow(0 2px 6px rgba(0, 0, 0, .25))
 }
 
 .day .max {
     color: #111;
     font-size: 18px;
     font-weight: 800;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, .55);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, .55)
 }
 
 .day .min {
     color: #333;
     font-size: 13px;
     font-weight: 600;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, .5);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, .5)
 }
 
 .day:hover {
     background: rgba(255, 255, 255, .34);
     box-shadow: 0 8px 18px rgba(0, 0, 0, .16);
     transform: translateY(-1px);
-    transition: all .15s ease;
+    transition: all .15s ease
 }
 
 .status {
@@ -351,16 +336,16 @@ body {
     font-weight: 700;
     min-height: 18px;
     margin: 10px auto 0;
-    max-width: var(--content-width);
+    max-width: var(--content-width)
 }
 
-/* Pixel Parallax Background (single scene) */
+/* Pixel Parallax Background – ช้าลง */
 .pixel-bg {
     position: fixed;
     inset: 0;
     z-index: -1;
     overflow: hidden;
-    background: #7ba9be;
+    background: #7ba9be
 }
 
 .pixel-bg .layer {
@@ -371,34 +356,30 @@ body {
     background-position: 0 100%;
     background-size: auto 100%;
     pointer-events: none;
-    will-change: background-position;
+    will-change: background-position
 }
 
 .pixel-bg .sky {
     background-image: url("assets/pixel/bg-sky.png");
-    animation: move-sky 120s linear infinite;
-    /* เดิม 40s → ช้าลง 3 เท่า */
+    animation: move-sky 120s linear infinite
 }
 
 .pixel-bg .stars {
     background-image: url("assets/pixel/stars.png");
     opacity: .4;
-    animation: move-stars 240s linear infinite, twinkle 3s steps(2) infinite;
-    /* เดิม 80s → 240s */
+    animation: move-stars 240s linear infinite, twinkle 3s steps(2) infinite
 }
 
 .pixel-bg .clouds-mid {
     background-image: url("assets/pixel/clouds-mid.png");
     opacity: .85;
-    animation: move-mid 90s linear infinite;
-    /* เดิม 25s → 90s */
+    animation: move-mid 90s linear infinite
 }
 
 .pixel-bg .clouds-front {
     background-image: url("assets/pixel/clouds-front.png");
     opacity: .95;
-    animation: move-front 60s linear infinite;
-    /* เดิม 15s → 60s */
+    animation: move-front 60s linear infinite
 }
 
 @keyframes move-sky {
@@ -455,43 +436,42 @@ body {
     }
 }
 
-/* Responsive: force 7 columns on small screens with no horizontal scroll */
-@media (max-width: 560px) {
+@media (max-width:560px) {
     .search {
-        top: 8px;
+        top: 8px
     }
 
     .week {
         grid-template-columns: repeat(7, 1fr);
-        gap: 6px;
+        gap: 6px
     }
 
     .day {
         height: 90px;
-        padding: 6px 4px;
+        padding: 6px 4px
     }
 
     .day .name {
-        font-size: 10px;
+        font-size: 10px
     }
 
     .day img {
         width: 24px;
-        height: 24px;
+        height: 24px
     }
 
     .day .max {
-        font-size: 14px;
+        font-size: 14px
     }
 
     .day .min {
-        font-size: 11px;
+        font-size: 11px
     }
 }
 
-/* ===== Favorites block (glass pastel) ===== */
+/* ===== Favorites (glass pastel) ===== */
 .favorites-wrap {
-    margin-top: 16px;
+    margin-top: 16px
 }
 
 .header-bar {
@@ -500,13 +480,13 @@ body {
     align-items: center;
     margin: 4px 0 12px;
     padding-bottom: 6px;
-    border-bottom: 1px solid rgba(255, 255, 255, .32);
+    border-bottom: 1px solid rgba(255, 255, 255, .32)
 }
 
 .header-bar h2 {
     margin: 0;
     font-size: 18px;
-    color: #132423;
+    color: #132423
 }
 
 #refresh-btn {
@@ -517,87 +497,103 @@ body {
     border-radius: 10px;
     font-weight: 700;
     cursor: pointer;
-    transition: background .18s ease, transform .12s ease;
+    transition: background .18s ease, transform .12s ease
 }
 
 #refresh-btn:hover {
     background: #A0D8EF;
-    transform: translateY(-1px);
+    transform: translateY(-1px)
 }
 
 .favorites-grid {
     display: grid;
     gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr))
 }
 
+/* การ์ดโปรด: grid 3 คอลัมน์ + เผื่อที่ด้านขวาสำหรับปุ่มลบ */
 .fav-card {
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 12px;
-    padding: 12px;
+    padding: 12px 48px 12px 12px;
     border-radius: 14px;
     background: rgba(255, 255, 255, .22);
     border: 1px solid rgba(255, 255, 255, .36);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .12);
     backdrop-filter: blur(10px) saturate(120%);
     -webkit-backdrop-filter: blur(10px) saturate(120%);
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease
+}
+
+.fav-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .16)
+}
+
+.fav-icon {
+    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, .65)) drop-shadow(0 2px 6px rgba(0, 0, 0, .25))
+}
+
+.fav-info {
+    min-width: 0
 }
 
 .fav-city {
     margin: 0;
     font-weight: 800;
     color: #132423;
-}
-
-.fav-temp {
-    margin-left: auto;
-    font-size: 22px;
-    font-weight: 800;
-    color: #0f1c1a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .fav-desc {
     font-size: 12px;
-    color: #28504b;
+    color: #34524c;
+    opacity: .9
 }
 
+.fav-temp {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f1c1a
+}
+
+/* ปุ่มลบ: คลิกได้แน่นอน */
 .fav-remove {
     position: absolute;
-    right: 8px;
     top: 8px;
-    width: 24px;
-    height: 24px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    border: 0;
-    background: #ff4d4d;
+    border: none;
+    background: #ff5a63;
     color: #fff;
+    font-weight: 800;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    font-weight: 700;
+    z-index: 5;
+    pointer-events: auto;
+    box-shadow: 0 6px 12px rgba(255, 90, 99, .35)
 }
 
 .fav-remove:hover {
-    filter: brightness(1.08);
+    filter: brightness(1.05);
+    transform: translateY(-1px)
 }
 
-/* ซ่อนทั้งบล็อกจนกว่าจะมีรายการ/การค้นหา */
+.fav-remove:active {
+    transform: translateY(0)
+}
+
 .favorites-wrap.hidden {
-    display: none !important;
-}
-
-/* ปรับพื้นหลังให้ขยับช้าลง (ลดเวียนหัว) */
-.pixel-bg .sky {
-    animation: move-sky 120s linear infinite;
-}
-
-.pixel-bg .stars {
-    animation: move-stars 240s linear infinite, twinkle 3s steps(2) infinite;
-}
-
-.pixel-bg .clouds-mid {
-    animation: move-mid 90s linear infinite;
-}
-
-.pixel-bg .clouds-front {
-    animation: move-front 60s linear infinite;
+    display: none !important
 }
