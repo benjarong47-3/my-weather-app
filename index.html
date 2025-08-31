@@ -2,23 +2,135 @@
 <html lang="th">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="app-container">
-        <h1>Weather App</h1>
-        <form id="search-form">
-            <input type="text" id="city-input" placeholder="ค้นหาชื่อเมือง..." required>
-            <button type="submit">ค้นหา</button>
-        </form>
-        <div id="weather-info-container" class="weather-info">
-            <!-- ข้อมูลสภาพอากาศจะแสดงที่นี่ -->
+
+    <!-- Pixel Parallax Background (single scene) -->
+    <div class="pixel-bg" aria-hidden="true">
+        <div class="layer sky"></div>
+        <div class="layer stars"></div>
+        <div class="layer clouds-mid"></div>
+        <div class="layer clouds-front"></div>
+    </div>
+
+    <div class="stage">
+        <div class="board">
+
+            <!-- Header -->
+            <header class="app-header">
+                <div class="brand">
+                    <div class="pixel-logo" aria-hidden="true">
+                        <svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                            <!-- sun highlight/body -->
+                            <rect x="2" y="2" width="1" height="1" fill="#FFE9A8" />
+                            <rect x="3" y="2" width="1" height="1" fill="#FFE9A8" />
+                            <rect x="4" y="2" width="1" height="1" fill="#FFD085" />
+                            <rect x="2" y="3" width="1" height="1" fill="#FFE3BA" />
+                            <rect x="3" y="3" width="1" height="1" fill="#FFD085" />
+                            <rect x="4" y="3" width="1" height="1" fill="#FFD085" />
+                            <rect x="5" y="3" width="1" height="1" fill="#FFD085" />
+                            <rect x="2" y="4" width="1" height="1" fill="#FFE3BA" />
+                            <rect x="3" y="4" width="1" height="1" fill="#FFD085" />
+                            <rect x="4" y="4" width="1" height="1" fill="#FFD085" />
+                            <rect x="5" y="4" width="1" height="1" fill="#FFD085" />
+                            <rect x="3" y="5" width="1" height="1" fill="#FFD085" />
+                            <rect x="4" y="5" width="1" height="1" fill="#FFD085" />
+                            <!-- cloud highlight/body -->
+                            <rect x="6" y="6" width="1" height="1" fill="#F4FAFF" />
+                            <rect x="7" y="6" width="1" height="1" fill="#F4FAFF" />
+                            <rect x="8" y="6" width="1" height="1" fill="#F4FAFF" />
+                            <rect x="9" y="6" width="1" height="1" fill="#F4FAFF" />
+                            <rect x="10" y="6" width="1" height="1" fill="#F4FAFF" />
+                            <rect x="4" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="5" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="6" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="7" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="8" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="9" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="10" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="11" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="12" y="7" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="5" y="8" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="6" y="8" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="7" y="8" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="8" y="8" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="9" y="8" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="10" y="8" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="11" y="8" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="12" y="8" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="6" y="9" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="7" y="9" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="8" y="9" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="9" y="9" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="10" y="9" width="1" height="1" fill="#DCEAF1" />
+                            <rect x="11" y="9" width="1" height="1" fill="#DCEAF1" />
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="brand-title pastel-pixel">WeatherNow</h1>
+                        <p class="brand-tag">Web App พยากรณ์อากาศแบบเรียลไทม์</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Search -->
+            <form id="search-form" class="search search--top">
+                <input id="city-input" type="text" placeholder="ค้นหาชื่อเมือง..." required />
+                <button type="submit">ค้นหา</button>
+            </form>
+
+            <!-- Weather card (glass) : hidden until search -->
+            <section class="card main-card weather-card hidden" id="weather-card">
+                <div class="main-top">
+                    <div class="when" id="when-text">—</div>
+                    <div class="hero">
+                        <img id="cur-icon" alt="" />
+                        <div class="hero-text">
+                            <div class="cond" id="cur-desc">—</div>
+                            <div class="temp" id="cur-temp">—</div>
+                            <div class="place" id="cur-place">—</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slab">
+                    <div class="slab-item">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 18h18M6 14l2 2m8-2l-2 2M12 8v8" stroke="currentColor" stroke-width="1.6"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span id="sunrise">—</span>
+                    </div>
+                    <div class="slab-item center">
+                        <span id="day-length">—</span>
+                    </div>
+                    <div class="slab-item">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 18h18M6 14l2 2m8-2l-2 2M12 16V8" stroke="currentColor" stroke-width="1.6"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span id="sunset">—</span>
+                    </div>
+                </div>
+
+                <div class="metrics">
+                    <div class="metric"><span class="label">Rain:</span> <span id="rain">—</span></div>
+                    <div class="metric"><span class="label">Humidity:</span> <span id="humidity">—</span></div>
+                    <div class="metric"><span class="label">Wind:</span> <span id="wind">—</span></div>
+                </div>
+
+                <div class="week" id="week-grid"></div>
+            </section>
+
+            <div id="status" class="status"></div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
