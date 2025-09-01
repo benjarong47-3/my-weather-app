@@ -1,4 +1,4 @@
-# WeatherNow — พยากรณ์อากาศสไตล์พิกเซลพาสเทล [Demo](https://weathernowpixel.netlify.app/)
+# WeatherNow — พยากรณ์อากาศสไตล์พิกเซลพาสเทล [Demo](https://weathernow-part2.netlify.app/)
 
 เว็บแอปพยากรณ์อากาศแบบเรียลไทม์ด้วย HTML/CSS/JS ล้วน แสดงสภาพอากาศปัจจุบันและรายสัปดาห์ รองรับการเพิ่มและจัดการเมืองโปรดด้วย `localStorage` และมีฉากหลังแนวพิกเซลพาสเทลแบบ Parallax
 
