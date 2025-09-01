@@ -1,4 +1,4 @@
-# WeatherNow — พยากรณ์อากาศ (Part 1) [Demo](https://weathernowpixel.netlify.app/)
+# WeatherNow — พยากรณ์อากาศ (Part 1) [Demo](https://weathernow-part1.netlify.app/)
 
 เว็บแอปพยากรณ์อากาศแบบเรียลไทม์ด้วย **HTML/CSS/JS** ล้วน แสดง **สภาพอากาศปัจจุบัน** พร้อม **พยากรณ์รายสัปดาห์** 
 
