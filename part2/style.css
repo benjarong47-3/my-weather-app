@@ -94,7 +94,11 @@ body {
     font-size: 22px;
     letter-spacing: .5px;
     color: #fff;
-    text-shadow: 0 0 6px rgba(255, 255, 255, .35), 0 2px 10px rgba(0, 0, 0, .25), 1px 1px rgba(160, 216, 239, .18), -1px 1px rgba(245, 169, 184, .12)
+    text-shadow:
+    0 0 6px rgba(255, 255, 255, .35),     /* โกลว์ขาว */
+    0 2px 10px rgba(0, 0, 0, .25),        /* เงาด้านล่าง */
+    1px 1px rgba(160, 216, 239, .18),     /* แต้มฟ้า */
+    -1px 1px rgba(245, 169, 184, .12);    /* แต้มชมพู */
 }
 
 .brand-tag {
