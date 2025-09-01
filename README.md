@@ -15,8 +15,13 @@
 
 ---
 
-## สกรีนช็อต
 
-```md
-![Part01](doc/screenshot-01.png)
-![Part02](doc/screenshot-02.png)
+<h2>สกรีนช็อต</h2>
+
+<table>
+  <tr>
+    <td><img src="doc/screenshot-01.png" alt="หน้าหลัก" width="600"></td>
+    <td><img src="doc/screenshot-02.png" alt="รายการเมืองโปรด" width="600"></td>
+  </tr>
+</table>
+
