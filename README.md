@@ -19,8 +19,8 @@
 
 <table>
   <tr>
-    <td><img src="doc/screenshot-01.png" alt="หน้าหลัก" width="600"></td>
-    <td><img src="doc/screenshot-02.png" alt="รายการเมืองโปรด" width="600"></td>
+    <td><img src="part2/doc/screenshot-01.png" alt="หน้าหลัก" width="600"></td>
+    <td><img src="part2/doc/screenshot-02.png" alt="รายการเมืองโปรด" width="600"></td>
   </tr>
 </table>
 
